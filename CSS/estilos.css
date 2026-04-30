@@ -1,46 +1,235 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f8fb;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #0077b6;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff7f8;
+  color: #3b252c;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(48, 18, 28, 0.65), rgba(48, 18, 28, 0.65)),
+    url("../img/lenceria-hero.jpg");
+  background-size: cover;
+  background-position: center;
   color: white;
-  text-align: center;
-  padding: 40px 20px;
 }
 
-main {
-  padding: 30px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #f8c8d0;
+}
+
+.hero-content {
+  max-width: 650px;
+  padding: 130px 8%;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #d96b8a;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b94f6d;
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 80px 8%;
   text-align: center;
 }
 
-section {
+.section h2,
+.benefits h2,
+.contact h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #8b2f4a;
+}
+
+.intro {
+  margin-bottom: 45px;
+  color: #6d4b55;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(139, 47, 74, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.img {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url("../img/coleccion1.jpg");
+}
+
+.img2 {
+  background-image: url("../img/coleccion2.jpg");
+}
+
+.img3 {
+  background-image: url("../img/coleccion3.jpg");
+}
+
+.card h3 {
+  margin: 20px 0 10px;
+  color: #8b2f4a;
+}
+
+.card p {
+  padding: 0 20px 25px;
+  color: #6d4b55;
+}
+
+.benefits {
+  background-color: #f3d9df;
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.benefit-grid div {
+  background-color: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(139, 47, 74, 0.12);
+}
+
+.benefit-grid h3 {
+  color: #8b2f4a;
+  margin-bottom: 12px;
+}
+
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 25px;
+  color: #6d4b55;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 14px 20px;
+  width: 300px;
+  border: 1px solid #d9a7b5;
+  border-radius: 30px;
+  outline: none;
 }
 
 button {
-  background-color: #00b4d8;
+  background-color: #8b2f4a;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
+  padding: 14px 25px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #0096c7;
+  background-color: #6f233a;
 }
 
 footer {
+  background-color: #3b252c;
+  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 30px;
+  padding: 25px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .cards,
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
 }
